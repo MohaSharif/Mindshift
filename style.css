@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+:root {
+  --clr-bg: #ffffff;
+  --clr-text: #222;
+  --clr-accent: #00aaa3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Cairo', 'Inter', sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  direction: rtl;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  background: var(--clr-bg);
+  padding: 1rem 0;
+}
+
+nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--clr-accent);
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--clr-accent);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
