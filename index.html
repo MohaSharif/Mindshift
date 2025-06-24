@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عقليات المستقبل</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>كتاب «عقلية المستقبل»</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- الأسلوب العام -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- رأس الصفحة -->
   <header>
     <div class="container">
       <nav>
-        <a href="/">الرئيسية</a>
-        <a href="/book/">الكتاب</a>
-        <a href="/author/">المؤلف</a>
+        <!-- روابط نسبية حتى تعمل داخل Project Site -->
+        <a href="./">الرئيسية</a>
+        <a href="./book/">الكتاب</a>
+        <a href="./author/">المؤلف</a>
       </nav>
     </div>
   </header>
+
+  <!-- المحتوى الرئيسى -->
   <main>
     <div class="container">
       <h1>كتاب «عقلية المستقبل»</h1>
       <h2>تحديث عقلك لعصر الذكاء الاصطناعي</h2>
-      <p>هذا الموقع يعرض نبذة عن كتاب "عقلية المستقبل" وكيفية مواكبة التغيرات السريعة في عالم الذكاء الاصطناعي.</p>
-      <p><a class="btn" href="/assets/docs/aqliat-almustaqbal.pdf" target="_blank">اقرأ الآن</a></p>
-      <small>Switch to English? (coming soon)</small>
+
+      <p>
+        هذا الموقع يقدّم لك نبذة وموارد متجددة من كتاب <strong>عقلية
+        المستقبل</strong>، ودليلاً عمليًا لمواكبة التغيّرات السريعة في عالم
+        الذكاء الاصطناعي من منظور إنساني وتربوي.
+      </p>
+
+      <!-- رابط الـ PDF؛ يبدأ بـ ./ لأن الصفحة في الجذر -->
+      <p>
+        <a
+          class="btn"
+          href="./assets/docs/aqliat-almustaqbal.pdf"
+          target="_blank"
+          rel="noopener"
+          >اقرأ الآن</a
+        >
+      </p>
+
+      <small class="language-note">Switch to English? (coming soon)</small>
     </div>
   </main>
+
+  <!-- تذييل -->
   <footer>
-    <div class="container">&copy; 2024 عقلية المستقبل</div>
+    <div class="container">
+      &copy; 2025 Mohammed Sharif Abu Ma’ilq – جميع الحقوق محفوظة
+    </div>
   </footer>
 </body>
 </html>
