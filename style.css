@@ -58,8 +58,10 @@ main {
 }
 
 .hero-img {
-  max-width: 100%;
-  height: auto;
-  margin: 1rem 0;
   display: block;
+  margin: 1.5rem auto;
+  width: 20%;        /* shrink to ~1/5 of page width */
+  max-width: 240px;  /* prevent it from growing too large on big screens */
+  height: auto;      /* keep aspect ratio */
+  border-radius: 8px;
 }
