@@ -56,3 +56,10 @@ main {
   border-radius: 0.25rem;
   text-decoration: none;
 }
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  display: block;
+}
