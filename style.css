@@ -107,20 +107,30 @@ main {
   .author-photo{width:100%;max-width:100%}
 }
 
-.read-more {
-  margin-top: 1rem;
-  cursor: pointer;
+.read-more{
+  margin-top:1rem;
 }
-.read-more summary {
-  list-style: none;           /* hide default marker */
-  padding: .6rem 1.4rem;
-  background: var(--clr-accent);
-  color: #fff;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: 600;
-  transition: background .2s;
+
+.read-more summary{
+  list-style:none;                 /* أخفي الماركر الافتراضي */
+  padding:.6rem 1.4rem;
+  background:var(--clr-accent);
+  color:#fff;
+  border-radius:4px;
+  text-align:center;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .2s;
 }
-.read-more summary:hover {background: var(--clr-accent-warm);}
-.read-more summary::after {content:" \u2b07";}                /* caret down */
-.read-more[open] summary::after {content:" \u2b06";}          /* caret up */
+
+.read-more summary:hover{
+  background:var(--clr-accent-warm);
+}
+
+/* السهم بالاتجاهين */
+.read-more summary::after{
+  content:" ⬇";
+}
+.read-more[open] summary::after{
+  content:" ⬆";
+}
