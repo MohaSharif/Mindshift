@@ -76,16 +76,16 @@ main {
 
 .author-section{
   display:flex;
-  flex-direction:row-reverse;
+  flex-direction:row;
   gap:2rem;
   flex-wrap:wrap;
 }
 
-.author-photo{
-  width: auto;        /* استخدم العرض الأصلي للصورة */
-  max-width: 100%;    /* يتقلّص فقط لو صارت أوسع من الحاوية */
-  height: auto;       /* يحافظ على الأبعاد */
+.author-photo {
+  width: 50%;        /* نصف العرض الأصلي تقريباً */
+  height: auto;      /* يحافظ على النسبة */
   border-radius: 8px;
+  max-width: 500px;  /* سقف اختياري حتى لا تكبر كثيراً */
 }
 
 .author-text{
