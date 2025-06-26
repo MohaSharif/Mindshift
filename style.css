@@ -14,13 +14,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Cairo', 'Inter', sans-serif;
-  background: var(--clr-bg);
-  color: var(--clr-text);
-  direction: rtl;
-}
-
 body {
   min-height: 100vh;
   display: flex;
@@ -83,10 +76,9 @@ main {
 
 .author-section{
   display:flex;
-  flex-direction:row-reverse;   /* image on the right in RTL */
-  align-items:flex-start;
+  flex-direction:row-reverse;
   gap:2rem;
-  flex-wrap:nowrap;             /* keep side-by-side on desktop */
+  flex-wrap:wrap;
 }
 
 .author-photo{
@@ -127,13 +119,6 @@ main {
   background:var(--clr-accent-warm);
 }
 
-/* السهم بالاتجاهين */
-.read-more summary::after{
-  content:" ⬇";
-}
-.read-more[open] summary::after{
-  content:" ⬆";
-}
 /* حجم الأساس للخطوط + وزن العناوين */
 html{
   font-family:'Cairo','Inter',sans-serif;
