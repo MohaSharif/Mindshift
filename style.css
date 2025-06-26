@@ -81,24 +81,30 @@ main {
   border: 4px solid var(--clr-surface);
 }
 
-.author-section {
-  display: flex;
-  flex-direction: row-reverse; /* image on right in RTL */
-  align-items: flex-start;
-  gap: 2rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
+.author-section{
+  display:flex;
+  flex-direction:row-reverse;   /* image on the right in RTL */
+  align-items:flex-start;
+  gap:2rem;
+  flex-wrap:nowrap;             /* keep side-by-side on desktop */
 }
 
-.author-photo {
-  width: 200px;
-  max-width: 100%;
-  border-radius: 8px;
+.author-photo{
+  width:50%;        /* ≈ نصف الحاوية */
+  max-width:320px;  /* لا تكبر أكثر من ذلك */
+  height:auto;
+  border-radius:8px;
 }
 
-.author-text {
-  flex: 1;
-  min-width: 220px;
+.author-text{
+  flex:1;           /* يشغل باقي العرض */
+  min-width:240px;  /* يمنع الانهيار في الشاشات المتوسطة */
+}
+
+/* MOBILE: تكديس تحت بعض عند الشاشات الضيقة */
+@media(max-width:600px){
+  .author-section{flex-wrap:wrap}
+  .author-photo{width:100%;max-width:100%}
 }
 
 .read-more {
