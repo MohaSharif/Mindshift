@@ -82,10 +82,12 @@ main {
 }
 
 .author-photo{
-  width: 300px;     /* حجم ثابت ≈ نصف أبعاد الصورة الأصلية */
-  height: auto;     /* يحافظ على النسبة */
-  max-width: 100%;  /* يضمن عدم تجاوز عرض الحاوية على الشاشات الضيقة */
+  width: 300px;       /* ثابت ≈ نصف أبعاد الأصل */
+  height: auto;       /* يحافظ على النسبة */
+  max-width: 100%;    /* ينكمش على الموبايل */
   border-radius: 8px;
+  object-fit: cover;  /* قصّ الفائض لو كان أطول */
+  align-self: flex-start; /* يبقى في أعلى العمود */
 }
 
 .author-text{
@@ -96,7 +98,6 @@ main {
 /* MOBILE: تكديس تحت بعض عند الشاشات الضيقة */
 @media(max-width:600px){
   .author-section{flex-wrap:wrap}
-  .author-photo{width:100%;max-width:100%}
 }
 
 .read-more{
