@@ -82,10 +82,10 @@ main {
 }
 
 .author-photo{
-  width:50%;        /* ≈ نصف الحاوية */
-  max-width:320px;  /* لا تكبر أكثر من ذلك */
-  height:auto;
-  border-radius:8px;
+  width: auto;        /* استخدم العرض الأصلي للصورة */
+  max-width: 100%;    /* يتقلّص فقط لو صارت أوسع من الحاوية */
+  height: auto;       /* يحافظ على الأبعاد */
+  border-radius: 8px;
 }
 
 .author-text{
