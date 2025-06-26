@@ -122,5 +122,5 @@ main {
   transition: background .2s;
 }
 .read-more summary:hover {background: var(--clr-accent-warm);}
-.read-more[open] summary::after {content:" \u2b06";}          /* caret up */
 .read-more summary::after {content:" \u2b07";}                /* caret down */
+.read-more[open] summary::after {content:" \u2b06";}          /* caret up */
