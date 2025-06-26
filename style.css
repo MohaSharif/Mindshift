@@ -109,4 +109,18 @@ main {
 
 .read-more {
   margin-top: 1rem;
+  cursor: pointer;
 }
+.read-more summary {
+  list-style: none;           /* hide default marker */
+  padding: .6rem 1.4rem;
+  background: var(--clr-accent);
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  transition: background .2s;
+}
+.read-more summary:hover {background: var(--clr-accent-warm);}
+.read-more[open] summary::after {content:" \u2b06";}          /* caret up */
+.read-more summary::after {content:" \u2b07";}                /* caret down */
