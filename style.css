@@ -140,3 +140,34 @@ h1,h2{
 .read-more[open] summary::after{
   content:" \2191";      /* ↑ عند الفتح */
 }
+
+/* ===== Contact Form ===== */
+.contact-form{
+  margin-top:1rem;
+  background:var(--clr-surface);
+  padding:1rem;
+  border-radius:8px;
+}
+
+.contact-form label{
+  display:block;
+  margin:0.5rem 0;
+  font-size:0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:0.5rem;
+  margin-top:0.25rem;
+  border:1px solid #555;
+  border-radius:4px;
+  background:#0d1117;
+  color:var(--clr-text);
+}
+
+.contact-form button{
+  width:100%;
+  margin-top:0.75rem;
+}
+
