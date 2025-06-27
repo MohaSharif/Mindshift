@@ -125,3 +125,21 @@ main{flex:1 0 auto}
   color:var(--clr-text);
   opacity:.9;
 }
+
+.slide-btn{
+  position:absolute;
+  left:50%; bottom:8%;
+  transform:translateX(-50%);
+  background:var(--clr-accent);
+  color:#fff;
+  padding:.6rem 1.2rem;
+  border-radius:4px;
+  font-size:.9rem;
+  text-decoration:none;
+  opacity:.9;
+  transition:opacity .25s,transform .25s;
+}
+.slide-btn:hover{
+  opacity:1;
+  transform:translate(-50%,-2px);
+}
