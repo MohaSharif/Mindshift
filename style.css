@@ -130,13 +130,14 @@ main{flex:1 0 auto}
   position:absolute;
   left:50%; bottom:8%;
   transform:translateX(-50%);
-  background:var(--clr-accent);
-  color:#fff;
-  padding:.6rem 1.2rem;
+  background:var(--clr-bg);       /* نفس خلفية الموقع */
+  color:var(--clr-accent);        /* نص بلون التمييز */
+  border:2px solid var(--clr-accent);
+  padding:.6rem 1.25rem;
   border-radius:4px;
   font-size:.9rem;
   text-decoration:none;
-  opacity:.9;
+  opacity:.95;
   transition:opacity .25s,transform .25s;
 }
 .slide-btn:hover{
