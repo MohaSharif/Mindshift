@@ -110,3 +110,18 @@ main{flex:1 0 auto}
 @media(max-width:600px){
   .hero-slider{max-width:100%}
 }
+
+.hero-headings{
+  text-align:center;
+  margin:2rem 0 1rem;
+}
+.hero-headings h1{
+  font-size:1.8rem;
+  margin-bottom:.25rem;
+}
+.hero-headings h2{
+  font-size:1.1rem;
+  font-weight:400;
+  color:var(--clr-text);
+  opacity:.9;
+}
