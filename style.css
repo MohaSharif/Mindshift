@@ -171,3 +171,15 @@ h1,h2{
   margin-top:0.75rem;
 }
 
+.pinterest-code{
+  margin-top:1rem;
+  text-align:center;
+}
+.pincode{
+  width:180px;          /* حجم مناسب لرمز QR */
+  height:auto;
+  border-radius:8px;
+  transition:transform .25s;
+}
+.pincode:hover{transform:scale(1.05);}
+
