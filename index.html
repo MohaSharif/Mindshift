@@ -13,7 +13,19 @@
   <!-- Style -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const slides=[...document.querySelectorAll('.hero-slider .slide')];
+  if(!slides.length) return;
+  let i=0;
+  const show=n=>slides.forEach((s,idx)=>s.classList.toggle('active',idx===n));
+  const next = ()=>{i=(i+1)%slides.length;show(i)};
+  const prev = ()=>{i=(i-1+slides.length)%slides.length;show(i)};
+  document.querySelector('.next').onclick=next;
+  document.querySelector('.prev').onclick=prev;
+  setInterval(next,5000);          // تكرار كل ٥ ثوانٍ
+});
+</script>
 <body>
   <!-- رأس الصفحة -->
   <header>
