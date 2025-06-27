@@ -33,6 +33,40 @@
 
   <!-- المحتوى الرئيسى -->
   <main>
+    <section class="hero-slider">
+      <div class="slide"><img src="assets/img/slider/slide-1.png" alt="" /></div>
+      <div class="slide"><img src="assets/img/slider/slide-2.png" alt="" /></div>
+      <div class="slide"><img src="assets/img/slider/slide-3.png" alt="" /></div>
+      <div class="slide"><img src="assets/img/slider/slide-4.png" alt="" /></div>
+      <div class="slide"><img src="assets/img/slider/slide-5.png" alt="" /></div>
+
+      <button class="prev">‹</button>
+      <button class="next">›</button>
+    </section>
+
+    <!-- slider script -->
+    <script>
+      const slides = [...document.querySelectorAll('.hero-slider .slide')];
+      let idx = 0;
+      function show(i) {
+        slides.forEach((s) => s.classList.remove('active'));
+        slides[i].classList.add('active');
+      }
+      show(0);
+      document.querySelector('.hero-slider .next').onclick = () => {
+        idx = (idx + 1) % slides.length;
+        show(idx);
+      };
+      document.querySelector('.hero-slider .prev').onclick = () => {
+        idx = (idx - 1 + slides.length) % slides.length;
+        show(idx);
+      };
+      setInterval(() => {
+        idx = (idx + 1) % slides.length;
+        show(idx);
+      }, 5000);
+    </script>
+
     <div class="container">
       <h1>عقلية قيد التحديث</h1>
       <h2>كيف تحافظ عقولنا على إنسانيتها في عصر الآلة؟</h2>
