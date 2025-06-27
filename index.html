@@ -6,72 +6,53 @@
   <title>عقلية قيد التحديث</title>
   <meta property="og:title" content="عقلية قيد التحديث">
   <meta name="twitter:title" content="عقلية قيد التحديث">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- الأسلوب العام -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Style -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- رأس الصفحة -->
   <header>
-    <div class="slide active"><img …></div>
+    <div class="container">
       <nav>
-        <!-- روابط نسبية حتى تعمل داخل Project Site -->
-        <a href="./">الرئيسية</a>
+        <a href="./index.html">الرئيسية</a>
         <a href="./book/">الكتاب</a>
         <a href="./author/">المؤلف</a>
       </nav>
     </div>
   </header>
 
-  <!-- المحتوى الرئيسى -->
+  <!-- المحتوى الرئيسي -->
   <main>
+    <!-- === سلايدر الصور الرئيسى === -->
     <section class="hero-slider">
-      <div class="slide"><img src="assets/img/slider/slide-1.png" alt="" /></div>
-      <div class="slide"><img src="assets/img/slider/slide-2.png" alt="" /></div>
-      <div class="slide"><img src="assets/img/slider/slide-3.png" alt="" /></div>
-      <div class="slide"><img src="assets/img/slider/slide-4.png" alt="" /></div>
-      <div class="slide"><img src="assets/img/slider/slide-5.png" alt="" /></div>
+      <div class="slide active"><img src="assets/img/slider/slide-1.png" alt=""></div>
+      <div class="slide"><img src="assets/img/slider/slide-2.png" alt=""></div>
+      <div class="slide"><img src="assets/img/slider/slide-3.png" alt=""></div>
+      <div class="slide"><img src="assets/img/slider/slide-4.png" alt=""></div>
+      <div class="slide"><img src="assets/img/slider/slide-5.png" alt=""></div>
 
-      <button class="prev">‹</button>
-      <button class="next">›</button>
+      <button class="prev" aria-label="السابق">‹</button>
+      <button class="next" aria-label="التالي">›</button>
     </section>
 
-
+    <!-- قسم تقديمى بسيط تحت السلايدر (اختيارى) -->
     <div class="container">
       <h1>عقلية قيد التحديث</h1>
       <h2>كيف تحافظ عقولنا على إنسانيتها في عصر الآلة؟</h2>
 
-      <!-- صورة الغلاف -->
-      <img
-        src="./assets/img/cover.png"
-        alt="غلاف كتاب عقلية المستقبل"
-        class="hero-img"
-        loading="lazy"
-      />
+      <img src="./assets/img/cover.png" alt="غلاف كتاب العقلية" class="hero-img" loading="lazy" />
 
       <p>
-        هذا الموقع يقدّم لك نبذة وموارد متجددة من كتاب <strong>عقلية
-        المستقبل</strong>، ودليلاً عمليًا لمواكبة التغيّرات السريعة في عالم
-        الذكاء الاصطناعي من منظور إنساني وتربوي.
+        هذا الموقع يقدم نبذة عن كتاب <strong>عقلية قيد التحديث</strong> وكيفية مواكبة التغيرات السريعة في عالم الذكاء الاصطناعي.
       </p>
 
-      <!-- رابط الـ PDF؛ يبدأ بـ ./ لأن الصفحة في الجذر -->
       <p>
-        <a
-          class="btn"
-          href="./assets/docs/aqliat-almustaqbal.pdf"
-          target="_blank"
-          rel="noopener"
-          >اقرأ الآن</a
-        >
+        <a class="btn" href="./assets/docs/aqliat-almustaqbal.pdf" target="_blank" rel="noopener">اقرأ الآن</a>
       </p>
 
       <small class="language-note">Switch to English? (coming soon)</small>
@@ -84,19 +65,25 @@
       &copy; 2025 Mohammed Sharif Abu Ma’ilq – جميع الحقوق محفوظة
     </div>
   </footer>
-  <!-- ضع هذا قبل </body> مباشرة -->
+
+  <!-- سكربت السلايدر -->
   <script>
-  document.addEventListener('DOMContentLoaded',()=>{
-    const slides=[...document.querySelectorAll('.hero-slider .slide')];
-    if(!slides.length) return;
-    let i=0;
-    const show=n=>{
-      slides.forEach((s,idx)=>s.classList.toggle('active',idx===n));
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = [...document.querySelectorAll('.hero-slider .slide')];
+    if (!slides.length) return;
+
+    let i = 0;
+    const show = n => {
+      slides.forEach((s, idx) => s.classList.toggle('active', idx === n));
     };
-    show(0);
-    document.querySelector('.next').onclick=()=>{i=(i+1)%slides.length;show(i)};
-    document.querySelector('.prev').onclick=()=>{i=(i-1+slides.length)%slides.length;show(i)};
-    setInterval(()=>{i=(i+1)%slides.length;show(i)},5000);
+
+    const next = () => { i = (i + 1) % slides.length; show(i); };
+    const prev = () => { i = (i - 1 + slides.length) % slides.length; show(i); };
+
+    document.querySelector('.hero-slider .next').addEventListener('click', next);
+    document.querySelector('.hero-slider .prev').addEventListener('click', prev);
+
+    setInterval(next, 5000); // تبديل كل 5 ثوانٍ
   });
   </script>
 </body>
