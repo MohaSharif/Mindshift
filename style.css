@@ -74,12 +74,12 @@ main {
   border: 4px solid var(--clr-surface);
 }
 
+/* ===== Layout polish ===== */
 .author-section{
-  display:flex;
-  flex-direction:row;
+  display:grid;
+  grid-template-columns: 1fr 350px; /* يسار مرن، يمين ثابت (صورة + كود) */
   gap:2rem;
-  flex-wrap:wrap;
-  align-items:flex-start;
+  align-items:flex-start;           /* محاذاة رأسية موحَّدة */
 }
 
 .photo-stack{
@@ -87,6 +87,7 @@ main {
   flex-direction:column;
   align-items:center;
 }
+.photo-stack .pincode{margin-top:1rem;}
 
 .author-photo{
   width: 300px;       /* ثابت ≈ نصف أبعاد الأصل */
@@ -101,11 +102,8 @@ main {
   flex:1;           /* يشغل باقي العرض */
   min-width:240px;  /* يمنع الانهيار في الشاشات المتوسطة */
 }
+.author-text > *{margin:1rem 0;}
 
-/* MOBILE: تكديس تحت بعض عند الشاشات الضيقة */
-@media(max-width:600px){
-  .author-section{flex-wrap:wrap}
-}
 
 .read-more{
   margin-top:1rem;
@@ -154,6 +152,7 @@ h1,h2{
   background:var(--clr-surface);
   padding:1rem;
   border-radius:8px;
+  width:100%;
 }
 
 .contact-form label{
@@ -181,9 +180,19 @@ h1,h2{
 .pincode{
   width:180px;          /* حجم مناسب لرمز QR */
   height:auto;
-  margin-top:1rem;
   border-radius:8px;
   transition:transform .25s;
 }
 .pincode:hover{transform:scale(1.05);}
+
+/* ===== Layout polish ===== */
+
+/* استجابة للموبايل */
+@media(max-width:800px){
+  .author-section{
+    grid-template-columns:1fr;      /* صف واحد */
+    justify-items:center;
+  }
+  .contact-form{max-width:500px}
+}
 
