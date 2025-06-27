@@ -205,6 +205,7 @@ h1,h2{
   margin:2rem auto;
 }
 .hero-slider .slide{position:absolute;inset:0;opacity:0;transition:opacity .7s;}
+.hero-slider .slide:first-child{opacity:1}
 .hero-slider .slide.active{opacity:1}
 .hero-slider img{width:100%;height:auto;display:block}
 .hero-slider button{
