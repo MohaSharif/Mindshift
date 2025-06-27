@@ -44,28 +44,6 @@
       <button class="next">›</button>
     </section>
 
-    <!-- slider script -->
-    <script>
-      const slides = [...document.querySelectorAll('.hero-slider .slide')];
-      let idx = 0;
-      function show(i) {
-        slides.forEach((s) => s.classList.remove('active'));
-        slides[i].classList.add('active');
-      }
-      show(0);
-      document.querySelector('.hero-slider .next').onclick = () => {
-        idx = (idx + 1) % slides.length;
-        show(idx);
-      };
-      document.querySelector('.hero-slider .prev').onclick = () => {
-        idx = (idx - 1 + slides.length) % slides.length;
-        show(idx);
-      };
-      setInterval(() => {
-        idx = (idx + 1) % slides.length;
-        show(idx);
-      }, 5000);
-    </script>
 
     <div class="container">
       <h1>عقلية قيد التحديث</h1>
@@ -106,5 +84,20 @@
       &copy; 2025 Mohammed Sharif Abu Ma’ilq – جميع الحقوق محفوظة
     </div>
   </footer>
+  <!-- ضع هذا قبل </body> مباشرة -->
+  <script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    const slides=[...document.querySelectorAll('.hero-slider .slide')];
+    if(!slides.length) return;
+    let i=0;
+    const show=n=>{
+      slides.forEach((s,idx)=>s.classList.toggle('active',idx===n));
+    };
+    show(0);
+    document.querySelector('.next').onclick=()=>{i=(i+1)%slides.length;show(i)};
+    document.querySelector('.prev').onclick=()=>{i=(i-1+slides.length)%slides.length;show(i)};
+    setInterval(()=>{i=(i+1)%slides.length;show(i)},5000);
+  });
+  </script>
 </body>
 </html>
