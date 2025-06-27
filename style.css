@@ -55,45 +55,6 @@ main{flex:1 0 auto}
 }
 .btn:hover{background:var(--clr-accent-warm)}
 
-/* ========== سلايدر الصفحة الرئيسية ========== */
-.hero-slider{
-  position:relative;
-  overflow:hidden;
-  border-radius:8px;
-  max-width:960px;
-  margin:2rem auto;
-}
-.hero-slider .slide{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  transition:opacity .7s ease;
-}
-.hero-slider .slide.active{opacity:1}
-.hero-slider img{width:100%;height:auto;display:block}
-
-.hero-slider button{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.45);
-  color:#fff;
-  border:none;
-  font-size:2rem;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  cursor:pointer;
-}
-.prev{left:12px}
-.next{right:12px}
-.hero-slider button:hover{background:rgba(0,0,0,.65)}
-
-@media(max-width:600px){
-  .hero-slider{max-width:100%}
-  h1{font-size:1.5rem}
-  h2{font-size:1.2rem}
-}
 
 /* صورة الغلاف أسفل السلايدر */
 .hero-img{
@@ -109,48 +70,20 @@ main{flex:1 0 auto}
   position:relative;
   overflow:hidden;
   border-radius:8px;
-  max-width:480px;
-  margin:2rem auto;
-}
-.hero-slider .slide{
-  position:absolute;inset:0;
-  opacity:0;transition:opacity .7s ease;
-}
-.hero-slider .slide.active{opacity:1}
-.hero-slider img{width:100%;height:auto;display:block}
-.hero-slider .caption{
-  position:absolute;bottom:12%;left:50%;transform:translateX(-50%);
-  text-align:center;color:#fff;text-shadow:0 2px 6px #000;
-}
-.hero-slider .caption h2{margin-bottom:.25rem;font-size:1.3rem}
-.hero-slider .caption p{font-size:.9rem}
-.hero-slider button{
-  position:absolute;top:50%;transform:translateY(-50%);
-  background:rgba(0,0,0,.45);color:#fff;border:none;
-  font-size:2rem;width:42px;height:42px;border-radius:50%;cursor:pointer;
-}
-.prev{left:8px}.next{right:8px}
-.hero-slider button:hover{background:rgba(0,0,0,.65)}
-@media(max-width:600px){.hero-slider{max-width:100%}}
-/* ===== Hero Slider ===== */
-.hero-slider{
-  position:relative;
-  overflow:hidden;
-  border-radius:8px;
-  max-width:480px;        /* نفس عرض الغلاف السابق تقريبًا */
+  max-width:480px;          /* عرض تقريبى للغلاف */
   margin:2rem auto;
 }
 
+/* كل الشرائح مخفية افتراضاً ليبقى القسم بطول الصورة النشطة */
 .hero-slider .slide{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  transition:opacity .7s ease;
+  display:none;
+  position:relative;        /* يبقى داخل التدفق */
 }
-.hero-slider .slide.active{opacity:1}
+.hero-slider .slide.active{display:block}
 
 .hero-slider img{width:100%;height:auto;display:block}
 
+/* التسمية التوضيحية */
 .hero-slider .caption{
   position:absolute;
   bottom:12%;
@@ -163,18 +96,12 @@ main{flex:1 0 auto}
 .hero-slider .caption h2{margin-bottom:.25rem;font-size:1.3rem}
 .hero-slider .caption p{font-size:.9rem}
 
+/* أزرار التنقّل */
 .hero-slider button{
   position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.45);
-  color:#fff;
-  border:none;
-  font-size:2rem;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  cursor:pointer;
+  top:50%;transform:translateY(-50%);
+  background:rgba(0,0,0,.45);color:#fff;border:none;
+  font-size:2rem;width:44px;height:44px;border-radius:50%;cursor:pointer;
 }
 .prev{left:8px}
 .next{right:8px}
@@ -183,4 +110,3 @@ main{flex:1 0 auto}
 @media(max-width:600px){
   .hero-slider{max-width:100%}
 }
-
