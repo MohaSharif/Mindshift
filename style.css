@@ -1,202 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap');
+/* ========== أساسيات ========== */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;600&display=swap');
 
-:root {
-  --clr-bg: #0F141B;          /* dark night */
-  --clr-surface: #1E242E;     /* card / header background */
-  --clr-text: #F1F5F9;        /* base text */
-  --clr-accent: #0EA5E9;      /* blue-teal sky */
-  --clr-accent-warm: #FCA311; /* sunrise orange */
+:root{
+  --clr-bg:#0F141B;
+  --clr-surface:#1E242E;
+  --clr-text:#F1F5F9;
+  --clr-accent:#0EA5E9;
+  --clr-accent-warm:#FCA311;
+  --ff-main:'Cairo','Inter',sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: var(--clr-bg);
-  color: var(--clr-text);
-}
-
-header,
-footer {
-  background: var(--clr-surface);
-  padding: 1rem 0;
-}
-
-nav a {
-  margin: 0 0.5rem;
-  text-decoration: none;
-  color: var(--clr-text);
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--clr-accent);
-}
-
-main {
-  flex: 1 0 auto;
-  padding: 2rem 0;
-}
-
-.container {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--clr-accent);
-  color: #fff;
-  padding: 0.75rem 1.25rem;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: var(--clr-accent-warm);
-}
-
-.hero-img {
-  display: block;
-  margin: 1.5rem auto;
-  width: 40%;        /* was 20%, now ~double */
-  max-width: 480px;  /* keep a sensible cap */
-  height: auto;
-  border-radius: 8px;
-  border: 4px solid var(--clr-surface);
-}
-
-/* ===== Layout polish ===== */
-.author-section{
-  display:grid;
-  grid-template-columns: 1fr 350px; /* يسار مرن، يمين ثابت (صورة + كود) */
-  gap:2rem;
-  align-items:flex-start;           /* محاذاة رأسية موحَّدة */
-}
-
-.photo-stack{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-.photo-stack .pincode{margin-top:1rem;}
-
-.author-photo{
-  width: 300px;       /* ثابت ≈ نصف أبعاد الأصل */
-  height: auto;       /* يحافظ على النسبة */
-  max-width: 100%;    /* ينكمش على الموبايل */
-  border-radius: 8px;
-  object-fit: cover;  /* قصّ الفائض لو كان أطول */
-  align-self: flex-start; /* يبقى في أعلى العمود */
-}
-
-.author-text{
-  flex:1;           /* يشغل باقي العرض */
-  min-width:240px;  /* يمنع الانهيار في الشاشات المتوسطة */
-}
-.author-text > *{margin:1rem 0;}
-
-
-.read-more{
-  margin-top:1rem;
-}
-
-.read-more summary{
-  list-style:none;                 /* أخفي الماركر الافتراضي */
-  padding:.6rem 1.4rem;
-  background:var(--clr-accent);
-  color:#fff;
-  border-radius:4px;
-  text-align:center;
-  font-weight:600;
-  cursor:pointer;
-  transition:background .2s;
-}
-
-.read-more summary:hover{
-  background:var(--clr-accent-warm);
-}
-
-/* حجم الأساس للخطوط + وزن العناوين */
 html{
-  font-family:'Cairo','Inter',sans-serif;
-  font-size:16px;        /* ثابت على كل المتصفحات */
-  line-height:1.6;
+  font-family:var(--ff-main);
   background:var(--clr-bg);
   color:var(--clr-text);
   direction:rtl;
-}
-h1,h2{
-  font-weight:600;       /* أخف من 700 حتى لا يبدو ضخمًا */
+  line-height:1.6;
 }
 
-/* أسهم زر «اقرأ المزيد» باستخدام Unicode آمن */
-.read-more summary::after{
-  content:" \2193";      /* ↓ عند الإغلاق */
-}
-.read-more[open] summary::after{
-  content:" \2191";      /* ↑ عند الفتح */
-}
+body{min-height:100vh;display:flex;flex-direction:column}
 
-/* ===== Contact Form ===== */
-.contact-form{
-  margin-top:1rem;
+header,footer{
   background:var(--clr-surface);
-  padding:1rem;
-  border-radius:8px;
-  width:100%;
+  padding:1rem 0;
 }
 
-.contact-form label{
-  display:block;
-  margin:0.5rem 0;
-  font-size:0.9rem;
-}
-
-.contact-form input,
-.contact-form textarea{
-  width:100%;
-  padding:0.5rem;
-  margin-top:0.25rem;
-  border:1px solid #555;
-  border-radius:4px;
-  background:#0d1117;
+nav a{
+  margin:0 .5rem;
   color:var(--clr-text);
+  text-decoration:none;
+  transition:color .3s;
+}
+nav a:hover{color:var(--clr-accent)}
+
+main{flex:1 0 auto}
+
+.container{
+  max-width:960px;
+  margin:0 auto;
+  padding:0 1rem;
+  text-align:center;
 }
 
-.contact-form button{
-  width:100%;
-  margin-top:0.75rem;
+.btn{
+  display:inline-block;
+  background:var(--clr-accent);
+  color:#fff;
+  padding:.75rem 1.25rem;
+  border-radius:4px;
+  text-decoration:none;
+  transition:background .3s;
 }
+.btn:hover{background:var(--clr-accent-warm)}
 
-.pincode{
-  width:180px;          /* حجم مناسب لرمز QR */
-  height:auto;
-  border-radius:8px;
-  transition:transform .25s;
-}
-.pincode:hover{transform:scale(1.05);}
-
-/* ===== Layout polish ===== */
-
-/* استجابة للموبايل */
-@media(max-width:800px){
-  .author-section{
-    grid-template-columns:1fr;      /* صف واحد */
-    justify-items:center;
-  }
-  .contact-form{max-width:500px}
-}
-
-/* ===== Hero Slider ===== */
+/* ========== سلايدر الصفحة الرئيسية ========== */
 .hero-slider{
   position:relative;
   overflow:hidden;
@@ -204,17 +63,44 @@ h1,h2{
   max-width:960px;
   margin:2rem auto;
 }
-.hero-slider .slide{position:absolute;inset:0;opacity:0;transition:opacity .7s;}
-.hero-slider .slide:first-child{opacity:1}
+.hero-slider .slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity .7s ease;
+}
 .hero-slider .slide.active{opacity:1}
 .hero-slider img{width:100%;height:auto;display:block}
+
 .hero-slider button{
-  position:absolute;top:50%;transform:translateY(-50%);
-  background:rgba(0,0,0,.45);color:#fff;border:none;
-  font-size:2rem;width:44px;height:44px;border-radius:50%;cursor:pointer
-  .hero-slider .slide{position:absolute;inset:0;opacity:0;transition:.7s}
-.hero-slider .slide.active{opacity:1}
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.45);
+  color:#fff;
+  border:none;
+  font-size:2rem;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  cursor:pointer;
 }
-.prev{left:12px}.next{right:12px}
+.prev{left:12px}
+.next{right:12px}
 .hero-slider button:hover{background:rgba(0,0,0,.65)}
-@media(max-width:600px){.hero-slider{max-width:100%}}
+
+@media(max-width:600px){
+  .hero-slider{max-width:100%}
+  h1{font-size:1.5rem}
+  h2{font-size:1.2rem}
+}
+
+/* صورة الغلاف أسفل السلايدر */
+.hero-img{
+  display:block;
+  margin:1.5rem auto;
+  width:40%;
+  max-width:480px;
+  border-radius:8px;
+  border:4px solid var(--clr-surface);
+}
