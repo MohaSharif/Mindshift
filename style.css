@@ -212,6 +212,8 @@ h1,h2{
   position:absolute;top:50%;transform:translateY(-50%);
   background:rgba(0,0,0,.45);color:#fff;border:none;
   font-size:2rem;width:44px;height:44px;border-radius:50%;cursor:pointer
+  .hero-slider .slide{position:absolute;inset:0;opacity:0;transition:.7s}
+.hero-slider .slide.active{opacity:1}
 }
 .prev{left:12px}.next{right:12px}
 .hero-slider button:hover{background:rgba(0,0,0,.65)}
