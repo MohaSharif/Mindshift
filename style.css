@@ -144,3 +144,38 @@ main{flex:1 0 auto}
   opacity:1;
   transform:translate(-50%,-2px);
 }
+/* ===== Author page layout ===== */
+.author-section{
+  display:grid;
+  grid-template-columns:1fr 350px;   /* text – photo */
+  gap:2rem;
+  align-items:flex-start;
+  margin-top:2rem;
+}
+.photo-stack{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.author-photo{
+  width:300px;
+  height:auto;
+  border-radius:8px;
+}
+.pincode{
+  width:180px;
+  height:auto;
+  margin-top:1rem;
+  border-radius:8px;
+  transition:transform .25s;
+}
+.pincode:hover{transform:scale(1.05)}
+
+/* mobile: stack columns */
+@media(max-width:800px){
+  .author-section{
+    grid-template-columns:1fr;
+    justify-items:center;
+  }
+  .author-photo{width:70vw;max-width:320px}
+}
