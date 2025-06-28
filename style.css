@@ -356,3 +356,12 @@ nav a.active::after{
 .contact-btn:hover{
   transform:translateY(-2px);
 }
+
+/* ===== Fix arrow direction (RTL) ===== */
+.prev svg,
+.prev i,          /* إذا كان FontAwesome */
+.prev::before{    /* fallback لو كان content رمزاً */
+  transform: scaleX(-1);   /* أو استخدم rotateY(180deg) */
+  display:inline-block;
+}
+
