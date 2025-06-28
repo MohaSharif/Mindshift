@@ -284,3 +284,41 @@ main{flex:1 0 auto}
 .send-btn:hover{opacity:.9}
 
 @media(min-width:800px){.contact-form{max-width:500px}}
+
+/* ===== Navbar mobile enhancements ===== */
+header{
+  position:sticky;          /* يبقى ظاهرًا عند التمرير */
+  top:0;z-index:100;
+  box-shadow:0 2px 4px rgba(0,0,0,.35);   /* ظل خفيف */
+}
+
+nav{
+  display:flex;justify-content:center;gap:1.5rem;
+  font-weight:700;
+}
+
+nav a{
+  position:relative;        /* لزخرفة الرابط الفعّال */
+  transition:color .25s;
+}
+
+nav a:hover{color:var(--clr-accent)}
+
+/* إبراز الرابط الفعّال (أضف class="active" في HTML) */
+nav a.active{
+  color:var(--clr-accent-warm);
+}
+nav a.active::after{
+  content:"";
+  position:absolute;
+  bottom:-6px;right:0;left:0;
+  height:2px;
+  background:var(--clr-accent-warm);
+  border-radius:1px;
+}
+
+/* تحسين حجم الروابط على الشاشات الصغيرة */
+@media(max-width:600px){
+  nav a{font-size:1.05rem;padding:.75rem 0}
+}
+
