@@ -171,13 +171,14 @@ main{flex:1 0 auto}
 }
 .pincode:hover{transform:scale(1.05)}
 
-/* mobile: stack columns */
-@media(max-width:800px){
+/* mobile — keep two columns but narrower */
+@media(max-width:600px){
   .author-section{
-    grid-template-columns:1fr;
-    justify-items:center;
+    grid-template-columns: 1fr 160px; /* نص + عمود صورة مصغّر */
+    gap: .75rem;
   }
-  .author-photo{width:70vw;max-width:320px}
+  .author-photo{width:160px}
+  .pincode{width:120px}
 }
 /* === Author page text refinements === */
 .author-text{
