@@ -148,7 +148,7 @@ main{flex:1 0 auto}
 .author-section{
   display:grid;
   grid-template-columns:1fr 350px;   /* text – photo */
-  gap:2rem;
+  gap:1rem;
   align-items:flex-start;
   margin-top:2rem;
 }
@@ -185,8 +185,9 @@ main{flex:1 0 auto}
   line-height:1.8;
 }
 .author-text > *{           /* توحيد الهوامش بين الفقرات والعنوان والزر */
-  margin:1rem 0;
+  margin:.5rem 0;
 }
+.author-text .btn{margin-bottom:1rem}
 .author-text h1,
 .author-text h2,
 .author-text h3{
