@@ -46,26 +46,32 @@
           <a href="../assets/docs/AuthorBio.pdf" class="btn" target="_blank" rel="noopener">اقرأ المزيد</a>
           <h2 style="margin-top:2rem;">تواصل مع الكاتب</h2>
 
-          <form action="https://formsubmit.co/YOUR_EMAIL@example.com"
-                method="POST" class="contact-form">
+          <form class="contact-form"
+                action="https://formsubmit.co/philomoha77@gmail.com"
+                method="POST">
+            <!-- مانع سبام -->
+            <input type="text" name="_honey" style="display:none">
 
-            <input type="hidden" name="_captcha" value="false">
-            <!-- اختياري: قم بإنشاء thanks.html لاحقاً إن رغبت -->
-            <input type="hidden" name="_next" value="https://USERNAME.github.io/REPO/thanks.html">
+            <!-- إعادة التوجيه بعد الإرسال -->
+            <input type="hidden" name="_next"
+                   value="https://mohasharif.github.io/Mindshift/author/?sent">
 
-            <label>الاسم الكامل
-              <input type="text" name="name" required>
-            </label>
+            <div class="form-group">
+              <label for="fullname">الاسم الكامل</label>
+              <input id="fullname" name="fullname" type="text" required>
+            </div>
 
-            <label>البريد الإلكتروني
-              <input type="email" name="email" required>
-            </label>
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني</label>
+              <input id="email" name="email" type="email" required>
+            </div>
 
-            <label>رسالتك
-              <textarea name="message" rows="4" required></textarea>
-            </label>
+            <div class="form-group">
+              <label for="message">رسالتك</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
 
-            <button type="submit" class="btn">إرسال</button>
+            <button type="submit" class="btn send-btn">إرسال</button>
           </form>
 
           <h2 style="margin-top:3rem;">التعاون مع الأفراد والمؤسسات</h2>
