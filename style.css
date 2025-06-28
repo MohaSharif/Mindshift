@@ -322,3 +322,25 @@ nav a.active::after{
   nav a{font-size:1.05rem;padding:.75rem 0}
 }
 
+/* ===== Slider button ===== */
+.slide{
+  position:relative;
+}
+.slide-btn{
+  position:absolute;
+  left:50%; bottom:1.4rem;
+  transform:translateX(-50%);
+  padding:.7rem 2rem;
+  background:var(--clr-accent);
+  color:#fff;
+  font-weight:600;
+  border-radius:6px;
+  text-decoration:none;
+  box-shadow:0 3px 8px rgba(0,0,0,.4);
+  transition:background .25s,transform .25s;
+}
+.slide-btn:hover{
+  background:var(--clr-accent-warm);
+  transform:translateX(-50%) translateY(-2px);
+}
+
