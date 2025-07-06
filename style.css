@@ -379,8 +379,13 @@ nav a.active::after{
 
 /* ─ NotebookLM thumbnail ───────────────────────────*/
 .nb-guide      {margin-top:1.5rem;text-align:center}
-.nb-thumb      {width:140px;max-width:35%;border-radius:6px;
-                transition:transform .35s cubic-bezier(.34,1.4,.64,1);}
+.nb-thumb{
+  width:280px;           /* ← was 140px */
+  max-width:65%;         /* ↑ سقف نسبي أكبر */
+  border-radius:6px;
+  cursor:pointer;
+  transition:transform .3s;
+}
 .nb-thumb:hover{transform:scale(2) translateY(-10%);z-index:20}
 .nb-caption    {font-size:.8rem;opacity:.75;margin-top:.4rem}
 
