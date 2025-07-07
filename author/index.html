@@ -59,12 +59,15 @@
           <form class="contact-form"
                 action="https://formsubmit.co/philomoha77@gmail.com"
                 method="POST">
-            <!-- مانع سبام -->
+
+            <!-- منع سبام خفي -->
             <input type="text" name="_honey" style="display:none">
 
-            <!-- إعادة التوجيه بعد الإرسال -->
-            <input type="hidden" name="_next"
-                   value="https://mohasharif.github.io/Mindshift/author/?sent">
+            <!-- إيقاف reCAPTCHA الافتراضي -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- إعادة توجيه بعد الإرسال (يمكن تعديل الرابط لاحقًا) -->
+            <input type="hidden" name="_next" value="https://mohasharif.github.io/Mindshift/author/?sent">
 
             <div class="form-group">
               <label for="fullname">الاسم الكامل</label>
@@ -81,7 +84,7 @@
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
 
-            <button type="submit" class="btn send-btn">إرسال</button>
+            <button type="submit" class="send-btn">إرسال</button>
           </form>
 
           <h2 style="margin-top:3rem;">التعاون مع الأفراد والمؤسسات</h2>
