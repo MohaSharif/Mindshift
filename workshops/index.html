@@ -1,55 +1,75 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الورشات - عقلية قيد التحديث</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" />
   <style>
-    .carousel-indicators [data-bs-target] {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #6c757d;
-      color: white;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
     }
-    .carousel-indicators {
-      position: static;
-      margin-top: 15px;
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .carousel-inner img {
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+    .carousel-indicators [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #bbb;
+    }
+    .carousel-indicators .active {
+      background-color: #fff;
     }
   </style>
 </head>
 <body>
 
-<div class="container my-5">
-  <h1 class="text-center mb-4">الورشات التدريبية</h1>
+<header class="py-3 border-bottom bg-dark">
+  <div class="container d-flex flex-wrap justify-content-center">
+    <nav class="nav nav-pills">
+      <a class="nav-link" href="/Mindshift/">الرئيسية</a>
+      <a class="nav-link" href="/Mindshift/book/">الكتاب</a>
+      <a class="nav-link" href="/Mindshift/author/">المؤلف</a>
+      <a class="nav-link active" href="/Mindshift/workshops/">الورشات</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container text-center py-5">
+  <h1 class="mb-4">الورشات التدريبية</h1>
 
   <div id="workshopsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/Mindshift/assets/img/workshops/1.png" class="d-block mx-auto" style="max-width: 600px; height: auto;" alt="ورشة 1">
+        <img src="/Mindshift/assets/img/workshops/1.png" class="d-block" alt="ورشة 1" />
       </div>
       <div class="carousel-item">
-        <img src="/Mindshift/assets/img/workshops/2.png" class="d-block mx-auto" style="max-width: 600px; height: auto;" alt="ورشة 2">
+        <img src="/Mindshift/assets/img/workshops/2.png" class="d-block" alt="ورشة 2" />
       </div>
       <div class="carousel-item">
-        <img src="/Mindshift/assets/img/workshops/3.png" class="d-block mx-auto" style="max-width: 600px; height: auto;" alt="ورشة 3">
+        <img src="/Mindshift/assets/img/workshops/3.png" class="d-block" alt="ورشة 3" />
       </div>
       <div class="carousel-item">
-        <img src="/Mindshift/assets/img/workshops/4.png" class="d-block mx-auto" style="max-width: 600px; height: auto;" alt="ورشة 4">
+        <img src="/Mindshift/assets/img/workshops/4.png" class="d-block" alt="ورشة 4" />
       </div>
     </div>
-
-    <!-- Indicators (الأرقام) -->
-    <div class="carousel-indicators justify-content-center">
-      <button type="button" data-bs-target="#workshopsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="1">1</button>
-      <button type="button" data-bs-target="#workshopsCarousel" data-bs-slide-to="1" aria-label="2">2</button>
-      <button type="button" data-bs-target="#workshopsCarousel" data-bs-slide-to="2" aria-label="3">3</button>
-      <button type="button" data-bs-target="#workshopsCarousel" data-bs-slide-to="3" aria-label="4">4</button>
+    <div class="carousel-indicators mt-3">
+      <button type="button" data-bs-target="#workshopsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="1"></button>
+      <button type="button" data-bs-target="#workshopsCarousel" data-bs-slide-to="1" aria-label="2"></button>
+      <button type="button" data-bs-target="#workshopsCarousel" data-bs-slide-to="2" aria-label="3"></button>
+      <button type="button" data-bs-target="#workshopsCarousel" data-bs-slide-to="3" aria-label="4"></button>
     </div>
   </div>
 </div>
